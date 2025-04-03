@@ -1,8 +1,9 @@
 import { FaSearch, FaUser } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { menus } from "../menu";
+import { menus } from "../data/menu";
 import HuluLogo from "./HuluLogo";
 import { useState } from "react";
+import styles from "../css/Header.module.css";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,12 +14,17 @@ function Header() {
 
   return (
     <>
-      <header>
-        <nav className="d-flex justify-content-between align-items-center bg-dark py-3 px-4">
+      <header className="position-absolute w-100">
+        <nav
+          className={`${styles.navPad} d-flex position-relative justify-content-between align-items-center bg-black bg-opacity-50 w-100`}
+        >
           <HuluLogo />
           <ul className="nav d-none d-md-flex">
             {menus.map((item) => (
-              <li key={item.id} className="list-group-item text-light px-4">
+              <li
+                key={item.id}
+                className="list-group-item text-light fw-semibold px-4"
+              >
                 {item.menuItem}
               </li>
             ))}
@@ -27,7 +33,7 @@ function Header() {
             onClick={toggleMenu}
             className="btn btn-outline-light d-md-none d-flex align-items-center gap-2"
           >
-            Home
+            {menus[0].menuItem}
             {!menuOpen ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </button>
           <div className="d-flex align-items-center gap-3">
@@ -38,10 +44,12 @@ function Header() {
           </div>
         </nav>
         {menuOpen && (
-          <div className="bg-transparent text-dark d-md-none d-flex justify-content-center">
-            <ul className="list-unstyled">
+          <div
+            className={`${styles.mobileMenu} z-1 position-absolute d-md-none bg-transparent text-light d-flex justify-content-center align-items-center w-100`}
+          >
+            <ul className="list-unstyled bg-black bg-opacity-50">
               {menus.map((item) => (
-                <li key={item.id} className=" py-1">
+                <li key={item.id} className="text-light fw-bold">
                   {item.menuItem}
                 </li>
               ))}

@@ -1,0 +1,14 @@
+.mobileMenu ul li {
+  padding: 0.7rem 7rem;
+}
+
+.mobileMenu ul li:hover {
+  background: #000000;
+}
+
+.navPad {
+  padding: 1.1rem 1.5rem;
+  @media (max-width: 576px) {
+    padding: 0.4rem 1.5rem;
+  }
+}
