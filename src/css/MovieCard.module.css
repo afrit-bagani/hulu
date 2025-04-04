@@ -1,7 +1,53 @@
-.movieCard {
-  width: 5000px;
+.movieCard:hover {
+  border: 2px solid gray;
+  border-radius: 7px;
+  transform: scale(1.04);
+  font-weight: 700;
+}
+
+.movieCard p:hover {
+  opacity: 1;
+}
+
+.title {
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
+  @media (min-width: 576px) and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 768px) and (max-width: 992px) {
+    font-size: 1.4rem;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    font-size: 1.6rem;
+  }
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    font-size: 1.8rem;
+  }
+  @media (min-width: 1400px) {
+    font-size: 2rem;
+  }
 }
 
 .movieImg {
-  width: 30rem;
+  border-radius: 9px;
+  @media (max-width: 576px) {
+    width: 14rem;
+  }
+  @media (min-width: 576px) and (max-width: 768px) {
+    width: 16rem;
+  }
+  @media (min-width: 768px) and (max-width: 992px) {
+    width: 20rem;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    width: 24rem;
+  }
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    width: 24rem;
+  }
+  @media (min-width: 1400px) {
+    width: 32rem;
+  }
 }

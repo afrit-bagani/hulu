@@ -23,7 +23,7 @@ function Header() {
             {menus.map((item) => (
               <li
                 key={item.id}
-                className="list-group-item text-light fw-semibold px-4"
+                className={`${styles.customHover} list-group-item text-light fw-semibold px-4 py-2`}
               >
                 {item.menuItem}
               </li>

@@ -6,20 +6,23 @@ type MovieCardProps = {
     backdrop_path: string;
     title: string;
   };
+  index: number;
 };
 
-function MovieCard({ item }: MovieCardProps) {
+function MovieCard({ item, index }: MovieCardProps) {
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
   return (
     <>
-      <div className={`${styles.movieCard}`}>
+      <div className={`${styles.movieCard} px-3 py-2`}>
         <img
           className={`${styles.movieImg}`}
           src={`${IMAGE_BASE_URL}${item.backdrop_path}`}
           alt={`${item.title}`}
-          // width={500}
         />
-        {/* <h6 className="">{item.title}</h6> */}
+        <p className="text-light opacity-50 pt-2">
+          {index % 2 == 0 ? "Watching" : "Start Watching"}
+        </p>
+        <p className={`${styles.title} text-light mt-4`}>{item.title}</p>
       </div>
     </>
   );

@@ -36,7 +36,7 @@ function Hero() {
   return (
     <>
       {movie ? (
-        <>
+        <div>
           <div
             className={`${styles.heroText} position-absolute ms-5 text-light`}
           >
@@ -60,7 +60,7 @@ function Hero() {
             height={1080}
             className="w-100 img-fluid object-fit-cover"
           />
-        </>
+        </div>
       ) : (
         <p className="text-dark text-center fs-4 fw-semibold mt-4">
           Loading...
