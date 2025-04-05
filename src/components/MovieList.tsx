@@ -50,7 +50,7 @@ function MovieList({ id }: MovieListProps) {
   }
 
   return (
-    <div className="d-flex align-items-center">
+    <div className="d-flex align-items-center w-100">
       <IoIosArrowBack
         onClick={handlePrev}
         className={`${styles.slider} text-light bg-black rounded-circle cursor-pointer z-3 p-1`}

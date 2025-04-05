@@ -13,7 +13,7 @@ function MovieCard({ item, index }: MovieCardProps) {
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
   return (
     <>
-      <div className={`${styles.movieCard} px-3 py-2`}>
+      <div className={`${styles.movieCard} px-4 py-2 my-2`}>
         <img
           className={`${styles.movieImg}`}
           src={`${IMAGE_BASE_URL}${item.backdrop_path}`}
